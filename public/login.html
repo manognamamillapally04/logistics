@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | BACS Logistics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .login-page {
+            min-height: calc(100vh - 150px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light-bg);
+            padding: 40px 20px;
+        }
+        .login-container {
+            background: var(--white);
+            max-width: 450px;
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+        .login-header {
+            text-align: center;
+            padding: 30px;
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+        .login-header img {
+            height: 40px;
+            filter: brightness(0) invert(1);
+            margin-bottom: 10px;
+        }
+        .login-header h2 {
+            color: var(--white);
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .login-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .login-tab {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            cursor: pointer;
+            background: #f8fafc;
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+        .login-tab.active {
+            background: var(--white);
+            color: var(--accent-blue);
+            border-bottom: 3px solid var(--accent-blue);
+        }
+        .login-body {
+            padding: 30px;
+        }
+        .login-form {
+            display: none;
+        }
+        .login-form.active {
+            display: block;
+        }
+        .login-form .form-group {
+            margin-bottom: 20px;
+        }
+        .forgot-pass {
+            display: block;
+            text-align: right;
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            margin-top: 5px;
+        }
+        .admin-badge {
+            display: inline-block;
+            background: var(--error);
+            color: var(--white);
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP HEADER BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-left">
+                <span class="flag">🇬🇧</span> <i class="fa-solid fa-phone" style="margin-left: 5px;"></i> +44 7359 656805
+            </div>
+            <div class="top-right">
+                <a href="mailto:bacslogisticsltd@gmail.com"><i class="fa-solid fa-envelope"></i> bacslogisticsltd@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
+                    <img src="assets/logo.png" alt="BACS Logistics Logo" style="height: 60px;">
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Back to Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="login-page">
+        <div class="login-container">
+            <div class="login-header">
+                <img src="assets/logo.png" alt="BACS Logistics">
+                <h2>Portal Access</h2>
+            </div>
+            
+            <div class="login-tabs">
+                <div class="login-tab active" id="tab-user" onclick="switchTab('user')">User Login</div>
+                <div class="login-tab" id="tab-admin" onclick="switchTab('admin')">Admin Login <span class="admin-badge">Secure</span></div>
+            </div>
+
+            <div class="login-body">
+                <!-- User Form -->
+                <form id="form-user" class="login-form active">
+                    <div class="form-group">
+                        <label for="user-email">Email Address</label>
+                        <input type="email" id="user-email" required placeholder="customer@company.com" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-pass">Password</label>
+                        <input type="password" id="user-pass" required placeholder="••••••••" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+                        <a href="#" class="forgot-pass">Forgot Password?</a>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" onclick="alert('User login simulated')">Sign In</button>
+                    <p style="text-align: center; margin-top: 15px; font-size: 0.9rem;">New customer? <a href="index.html#contact" class="text-blue">Request a quote</a></p>
+                </form>
+
+                <!-- Admin Form -->
+                <form id="form-admin" class="login-form">
+                    <div style="background: #fef2f2; border: 1px solid #fecaca; color: #b91c1c; padding: 10px; border-radius: 8px; margin-bottom: 20px; font-size: 0.85rem; text-align: center;">
+                        <i class="fa-solid fa-lock"></i> Authorized Personnel Only
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-id">Admin ID / Email</label>
+                        <input type="text" id="admin-id" required placeholder="admin@bacslogistics.co.uk" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-pass">Secure Password</label>
+                        <input type="password" id="admin-pass" required placeholder="••••••••" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+                    </div>
+                    <button type="button" class="btn btn-secondary btn-block" onclick="alert('Admin login simulated')" style="background-color: var(--primary-blue);">Secure Admin Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2025 BACS Logistics. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(type) {
+            // Update tabs
+            document.getElementById('tab-user').classList.remove('active');
+            document.getElementById('tab-admin').classList.remove('active');
+            document.getElementById('tab-' + type).classList.add('active');
+            
+            // Update forms
+            document.getElementById('form-user').classList.remove('active');
+            document.getElementById('form-admin').classList.remove('active');
+            document.getElementById('form-' + type).classList.add('active');
+        }
+    </script>
+</body>
+</html>

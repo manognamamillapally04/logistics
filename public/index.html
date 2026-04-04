@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACS Logistics | Fast & Reliable Logistics Solutions</title>
+    <meta name="description"
+        content="We deliver your goods safely and on time across the globe. Professional UK-based logistics company.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- TOP HEADER BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-left">
+                <span class="flag">🇬🇧</span> <i class="fa-solid fa-phone" style="margin-left: 5px;"></i> +44 7359
+                656805
+            </div>
+            <div class="top-right">
+                <a href="mailto:bacslogisticsltd@gmail.com"><i class="fa-solid fa-envelope"></i>
+                    bacslogisticsltd@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <div class="logo">
+                <img src="assets/logo.png" alt="BACS Logistics Logo" style="height: 50px;">
+                <span class="logo-text">BACS Logistics</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#tracking">Tracking</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="login.html" class="btn btn-primary"
+                            style="padding: 10px 20px; font-size: 0.95rem; margin-left: 10px;"><i
+                                class="fa-solid fa-user"></i> Login</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="fade-in-up">Fast & Reliable Logistics Solutions</h1>
+            <p class="fade-in-up delay-1">We deliver your goods safely and on time across the globe.</p>
+            <button class="btn btn-primary fade-in-up delay-2" id="quote-btn">Get a Quote</button>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive logistics solutions tailored directly to your needs.</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-ship"></i></div>
+                    <h3>Freight Transport</h3>
+                    <p>Reliable sea and land transportation for all your cargo requirements across vast distances.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-warehouse"></i></div>
+                    <h3>Warehousing</h3>
+                    <p>Secure storage facilities with modern inventory management for short and long-term needs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3>Door-to-Door Delivery</h3>
+                    <p>Seamless logistics picking up from the source and delivering directly to the final destination.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>Supply Chain Management</h3>
+                    <p>End-to-end management ensuring maximum efficiency, tracking, and cost optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRACKING SECTION -->
+    <section id="tracking" class="tracking bg-light section-padding">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Track Your Shipment</h2>
+                <p>Enter your tracking ID below to get real-time status updates and location.</p>
+            </div>
+            <div class="tracking-box">
+                <input type="text" id="tracking-input" placeholder="Enter Tracking ID (e.g. BACS123456)">
+                <button class="btn btn-secondary" id="track-btn">Track Now</button>
+            </div>
+            <div id="tracking-result" class="tracking-result hidden">
+                <h4>Shipment Status: <span class="status-badge">In Transit</span></h4>
+                <p><strong>Current Location:</strong> <span id="track-location">Port of Felixstowe, UK</span></p>
+                <p><strong>Expected Delivery Date:</strong> <span id="track-date">Tomorrow, 14:00 PM</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="about" class="why-us section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Us</h2>
+                <p>We stand out because of our unwavering commitment to excellence.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fa-solid fa-bolt text-blue"></i>
+                    <h4>Fast Delivery</h4>
+                    <p>Optimized routes for quick turnarounds.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-shield-halved text-blue"></i>
+                    <h4>Secure Handling</h4>
+                    <p>Your cargo is protected at every step.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-headset text-blue"></i>
+                    <h4>24/7 Support</h4>
+                    <p>Round the clock assistance whenever you need it.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-globe text-blue"></i>
+                    <h4>Global Coverage</h4>
+                    <p>Extensive network reaching across continents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / QUOTE SECTION -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Left Panel -->
+                <div class="contact-info bg-blue text-white">
+                    <h2>Get a Quote or Book a Consultation</h2>
+                    <p class="contact-desc">Fill out the form, and our sales team will reach out with a customized
+                        solution for your logistics needs.</p>
+
+                    <div class="info-list">
+                        <div class="info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h5>Phone</h5>
+                                <p>+44 7359 656805</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>bacslogisticsltd@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h5>Address</h5>
+                                <p>Gough Walk, London E14 6HN, UK</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <div>
+                                <h5>Business Hours</h5>
+                                <p>Mon - Sun: 9:00 AM - 6:00 PM<br>24/7 Support Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Panel (Form) -->
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="john@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+44 7000 000000">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company" placeholder="Company Ltd.">
+                            </div>
+                            <div class="form-group">
+                                <label for="postcode">Postcode *</label>
+                                <input type="text" id="postcode" name="postcode" required placeholder="E14 6HN">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Requirement</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label"><input type="checkbox" name="requirement"
+                                        value="Business"> Business</label>
+                                <label class="checkbox-label"><input type="checkbox" name="requirement"
+                                        value="Personal"> Personal</label>
+                                <label class="checkbox-label"><input type="checkbox" name="requirement"
+                                        value="Multi-site"> Multi-site movements</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Communication Preference</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="communicationPref" value="Phone"
+                                        checked> Phone</label>
+                                <label class="radio-label"><input type="radio" name="communicationPref" value="Email">
+                                    Email</label>
+                                <label class="radio-label"><input type="radio" name="communicationPref"
+                                        value="Face to face"> Face to face</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Tell us about your logistics needs..."></textarea>
+                        </div>
+
+                        <div class="form-group consent-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="consent" required>
+                                I consent to BACS Logistics storing my data to process my inquiry.
+                            </label>
+                        </div>
+
+                        <div id="form-msg" class="form-msg"></div>
+
+                        <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="BACS Logistics Logo" style="filter: brightness(0) invert(1); height: 40px;">
+                    <span style="color: var(--white); font-size: 1.5rem; font-weight: 700; margin-left: 10px;">BACS Logistics</span>
+                </div>
+                <p>Your trusted partner in modern, secure, and fast logistics operations globally.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#tracking">Tracking</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p>Gough Walk, London E14 6HN, UK</p>
+                <p>Call: +44 7359 656805</p>
+                <p>bacslogisticsltd@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BACS Logistics. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
