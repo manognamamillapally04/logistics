@@ -8,13 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navMenu.classList.toggle('active');
     });
 
-    // === SCROLL TO CONTACT FROM HERO ===
-    const quoteBtn = document.getElementById('quote-btn');
-    if(quoteBtn) {
-        quoteBtn.addEventListener('click', () => {
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-        });
-    }
+    // === SCROLL TO CONTACT FROM HERO (Removed to link to new page instead) ===
 
     // === STICKY NAVBAR SHADOW ===
     const navbar = document.getElementById('navbar');

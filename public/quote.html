@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote | BACS Logistics</title>
+    <meta name="description" content="Get a customized logistics quote or book a consultation with BACS Logistics.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .quote-page-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            background-color: var(--bg-light);
+            min-height: 70vh;
+        }
+        .quote-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+        }
+        .quote-card h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP HEADER BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-left">
+                <span class="flag">🇬🇧</span> <i class="fa-solid fa-phone" style="margin-left: 5px;"></i> +44 7359 656805
+            </div>
+            <div class="top-right">
+                <a href="mailto:bacslogisticsltd@gmail.com"><i class="fa-solid fa-envelope"></i> bacslogisticsltd@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <div class="logo">
+                <a href="index.html" style="text-decoration:none; display:flex; align-items:center;">
+                    <img src="assets/logo.png" alt="BACS Logistics Logo" style="height: 50px;">
+                    <span class="logo-text" style="margin-left: 10px; font-weight:700; color:var(--primary-color); font-size: 1.5rem;">BACS Logistics</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#tracking">Tracking</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="login.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.95rem; margin-left: 10px;"><i class="fa-solid fa-user"></i> Login</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- QUOTE FORM SECTION -->
+    <div class="quote-page-wrapper">
+        <div class="quote-card">
+            <h2>Request a Quote</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required placeholder="John">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+44 7000 000000">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Company Ltd.">
+                    </div>
+                    <div class="form-group">
+                        <label for="postcode">Postcode *</label>
+                        <input type="text" id="postcode" name="postcode" required placeholder="E14 6HN">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Requirement</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label"><input type="checkbox" name="requirement" value="Business"> Business</label>
+                        <label class="checkbox-label"><input type="checkbox" name="requirement" value="Personal"> Personal</label>
+                        <label class="checkbox-label"><input type="checkbox" name="requirement" value="Multi-site"> Multi-site movements</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Communication Preference</label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="communicationPref" value="Phone" checked> Phone</label>
+                        <label class="radio-label"><input type="radio" name="communicationPref" value="Email"> Email</label>
+                        <label class="radio-label"><input type="radio" name="communicationPref" value="Face to face"> Face to face</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your logistics needs..."></textarea>
+                </div>
+
+                <div class="form-group consent-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="consent" required>
+                        I consent to BACS Logistics storing my data to process my inquiry.
+                    </label>
+                </div>
+
+                <div id="form-msg" class="form-msg"></div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="submit-btn" style="width: 100%">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo" style="margin-bottom: 15px;">
+                    <img src="assets/logo.png" alt="BACS Logistics Logo" style="background-color: white; padding: 10px 15px; border-radius: 8px; height: 55px; display: block;">
+                </div>
+                <p>Your trusted partner in modern, secure, and fast logistics operations globally.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#tracking">Tracking</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="carrier.html">Carrier</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p>Gough Walk, London E14 6HN, UK</p>
+                <p>Call: +44 7359 656805</p>
+                <p>bacslogisticsltd@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BACS Logistics. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
